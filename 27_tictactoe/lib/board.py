@@ -54,12 +54,7 @@ class Game(object):
         # The game board is a double array
         # in which each item is the player currently
         # taking this square, or None if the square is empty
-        self.data = []
-        for i in range(ROWS):
-            row = []
-            for j in range(COLS):
-                row.append(None)
-            self.data.append(row)
+        self.data = [[None] * 3 for x in range(3)]
 
 
     def play(self,row,col):
